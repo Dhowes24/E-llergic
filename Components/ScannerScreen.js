@@ -29,8 +29,11 @@ class ScannerScreen extends Component {
         return (
             <ImageBackground source={require('../assets/MiddleBackground-E-llergic.png')}
                              style={{width: '100%', height: '100%'}}>
+                {/*Header */}
                 <View style={styles.headerStyle}>
-                        <TouchableOpacity style={styles.leftNavigationArrow}>
+                        <TouchableOpacity style={styles.leftNavigationArrow}
+                                          onPress={()=>{this.props.navigation.navigate('ListsScreen')}}
+                        >
                             <Image source={require('../assets/BackArrow-E-llergic.png')} // List Button
                                    style={styles.arrowStyle}/>
                             <Text style={styles.navigationText}> Lists</Text>
@@ -39,14 +42,19 @@ class ScannerScreen extends Component {
                     <Image source={require('../assets/MainPageLogo-E-llergic.png')} //Home Logo
                            style={styles.LogoStyle}/>
 
-                        <TouchableOpacity style={styles.rightNavigationArrow}>
+                        <TouchableOpacity style={styles.rightNavigationArrow}
+                                          onPress={()=>{this.props.navigation.navigate('AccountScreen')}}
+                        >
                             <Text style={styles.navigationText}> Account</Text>
                             <Image source={require('../assets/RightArrow-E-llergic.png')} //Account Button
                                    style={styles.arrowStyle}/>
                         </TouchableOpacity>
                 </View>
 
+                {/*Preview Body*/}
+                <View style={styles.containerStyle}>
 
+                </View>
             </ImageBackground>
         )
     }
@@ -56,6 +64,7 @@ class ScannerScreen extends Component {
 export default ScannerScreen;
 
 const styles = StyleSheet.create({
+    //Header Styles
     headerStyle: {
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -63,7 +72,7 @@ const styles = StyleSheet.create({
     leftNavigationArrow: {
         flexDirection: 'row',
         marginTop: '15%',
-        marginLeft: '5%',
+        marginLeft: '2%',
     },
     rightNavigationArrow: {
         flexDirection: 'row',
@@ -81,11 +90,19 @@ const styles = StyleSheet.create({
         marginTop: '-10%'
     },
     LogoStyle: {
-        marginTop: '4%',
-        marginLeft: '7%',
+        marginTop: '6%',
+        marginLeft: '10%',
         justifyContent: 'center',
         width: '17%',
         height: '100%'
+    },
+
+    //Body Styles
+    containerStyle:{
+        backgroundColor:'white',
+        width:'100%',
+        height:'68%',
+        marginTop: '8%'
     }
 
 });

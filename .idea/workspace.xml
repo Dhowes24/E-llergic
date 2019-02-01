@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22a74427-7ed9-4c3c-a495-4f14e4c83a1a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Components/AccountScreen.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Components/ListsScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/LoginScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/LoginScreen.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/ScannerScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/ScannerScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/App Icon - E-llergic.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/AppIcon-E-llergic.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/RightArrow-E-llergic.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/RightArrow-E-llergic.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+            <state relative-caret-position="628">
+              <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -35,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Components/LoginScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="832">
-              <caret line="91" column="19" selection-start-line="91" selection-end-line="92" />
+            <state relative-caret-position="173">
+              <caret line="32" column="36" selection-start-line="32" selection-end-line="33" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -44,14 +43,52 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Components/ScannerScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="48" selection-start-line="48" selection-end-line="48" />
+            <state relative-caret-position="328">
+              <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
-                <element signature="e#630#1555#0" />
+                <element signature="e#1621#1682#0" />
+                <element signature="e#1745#1823#0" />
+                <element signature="e#1967#2094#0" />
+                <element signature="e#2112#2163#0" />
+                <element signature="e#2185#2264#0" />
+                <element signature="e#2520#2559#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Components/AccountScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#557#1136#0" />
+                <element signature="e#1293#1371#0" />
+                <element signature="e#1381#1470#0" />
+                <element signature="e#1049#1100#0" />
+                <element signature="e#1122#1201#0" />
+                <element signature="e#1218#1355#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Components/ListsScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="366">
+              <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#1484#1535#0" />
+                <element signature="e#1557#1636#0" />
+                <element signature="e#1653#1790#0" />
               </folding>
             </state>
           </provider>
@@ -82,9 +119,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/Components/LoginScreen.js" />
+        <option value="$PROJECT_DIR$/App.js" />
         <option value="$PROJECT_DIR$/Components/ScannerScreen.js" />
+        <option value="$PROJECT_DIR$/Components/ListsScreen.js" />
+        <option value="$PROJECT_DIR$/Components/AccountScreen.js" />
       </list>
     </option>
   </component>
@@ -106,11 +145,6 @@
             <path>
               <item name="E-llergic" type="b2602c69:ProjectViewProjectNode" />
               <item name="E-llergic" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="E-llergic" type="b2602c69:ProjectViewProjectNode" />
-              <item name="E-llergic" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="E-llergic" type="b2602c69:ProjectViewProjectNode" />
@@ -157,12 +191,12 @@
       <workItem from="1548823768107" duration="1430000" />
       <workItem from="1548826287707" duration="4446000" />
       <workItem from="1548878427447" duration="1533000" />
-      <workItem from="1548880109557" duration="9366000" />
+      <workItem from="1548880109557" duration="11059000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16775000" />
+    <option name="totallyTimeSpent" value="18468000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -231,8 +265,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+        <state relative-caret-position="628">
+          <caret line="42" column="4" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -241,8 +275,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/LoginScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="91" column="19" selection-start-line="91" selection-end-line="92" />
+        <state relative-caret-position="173">
+          <caret line="32" column="36" selection-start-line="32" selection-end-line="33" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
@@ -251,11 +285,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/ScannerScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="48" selection-start-line="48" selection-end-line="48" />
+        <state relative-caret-position="328">
+          <caret line="93" column="23" selection-start-line="93" selection-start-column="23" selection-end-line="93" selection-end-column="23" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#630#1555#0" />
+            <element signature="e#1621#1682#0" />
+            <element signature="e#1745#1823#0" />
+            <element signature="e#1967#2094#0" />
+            <element signature="e#2112#2163#0" />
+            <element signature="e#2185#2264#0" />
+            <element signature="e#2520#2559#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/ListsScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="366">
+          <caret line="72" column="15" selection-start-line="72" selection-start-column="15" selection-end-line="72" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1484#1535#0" />
+            <element signature="e#1557#1636#0" />
+            <element signature="e#1653#1790#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Components/AccountScreen.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#557#1136#0" />
+            <element signature="e#1293#1371#0" />
+            <element signature="e#1381#1470#0" />
+            <element signature="e#1049#1100#0" />
+            <element signature="e#1122#1201#0" />
+            <element signature="e#1218#1355#0" />
           </folding>
         </state>
       </provider>

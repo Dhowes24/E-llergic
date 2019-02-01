@@ -6,6 +6,8 @@ import {Root} from "native-base";
 
 import LoginScreen from './Components/LoginScreen';
 import ScannerScreen from './Components/ScannerScreen';
+import ListsScreen from './Components/ListsScreen';
+import AccountScreen from './Components/AccountScreen';
 
 
 class App extends React.Component {
@@ -32,6 +34,12 @@ const AppNavigator = createStackNavigator({
   },
   ScannerScreen:{
     screen: ScannerScreen,
+  },
+  ListsScreen:{
+    screen: ListsScreen,
+  },
+  AccountScreen:{
+    screen: AccountScreen,
   },
 }, {
   initialRouteName: 'Home',
