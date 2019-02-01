@@ -30,8 +30,9 @@ class LoginScreen extends Component {
         //Login.php
         //Parameters [Password, Phone]
         //Check Password to Phone Number
-        this.props.navigation.navigate('HomeScreen')
+        this.props.navigation.navigate('ScannerScreen')
     };
+
     signUp(){
         //SignupPHP
         //Parameters [User, Password, Phone]
@@ -58,17 +59,21 @@ class LoginScreen extends Component {
                 <Image
                 source={require('../assets/greyLoginBar-E-llergic.png')}
                 style={styles.greyBarStyle}/>
+
                 <TextInput placeholderTextColor={'darkgrey'}
                            placeholder="Password"
                            onChangeText={(Password) => this.setState({Password:Password})}
                            secureTextEntry={true}
                            style={styles.textInputStyle}/>
+
                 <Image
                     source={require('../assets/greyLoginBar-E-llergic.png')}
                     style={styles.greyBarStyle}/>
+
                 <TouchableOpacity
                     onPress={()=>{this.state.Login ? this.login() : this.signUp()}}
                     style={styles.buttonBorderLogin}>
+
                 <View>
                         <Text style={styles.clickableText}>
                             {this.state.Login ? 'Login' : 'SignUp'}

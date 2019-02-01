@@ -1,9 +1,11 @@
 import React from 'react';
 import { StyleSheet,Button, Text, View } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import LoginScreen from './Components/LoginScreen';
 import { Font } from 'expo';
-import {Root} from "native-base"
+import {Root} from "native-base";
+
+import LoginScreen from './Components/LoginScreen';
+import ScannerScreen from './Components/ScannerScreen';
 
 
 class App extends React.Component {
@@ -28,9 +30,9 @@ const AppNavigator = createStackNavigator({
   Home: {
     screen: LoginScreen,
   },
-  // HomeScreen:{
-  //   screen: HomeScreen,
-  // },
+  ScannerScreen:{
+    screen: ScannerScreen,
+  },
 }, {
   initialRouteName: 'Home',
 });
