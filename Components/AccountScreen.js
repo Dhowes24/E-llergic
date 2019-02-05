@@ -42,6 +42,52 @@ class AccountScreen extends Component {
 
                 {/* Body */}
 
+                <View style={styles.containerStyle}>
+                    <Text style={styles.titleText}>
+                        Accounts
+                    </Text>
+                    <Image source={require('../assets/ThiccLiteBar-E-llergic.png')}
+                    style={styles.titleBar}/>
+
+                    <TouchableOpacity
+                        onPress={()=>{this.props.navigation.navigate('FriendsScreen')}}
+                    >
+                        <Text style={styles.subText}>
+                            Friends
+                        </Text>
+                        <Image source={require('../assets/DarkSinnyBar-E-llergic.png')}
+                        style={styles.subBar}/>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity>
+                        <Text style={styles.subText}>
+                            Social Accounts
+                        </Text>
+                        <Image source={require('../assets/DarkSinnyBar-E-llergic.png')}
+                               style={styles.subBar}/>
+                    </TouchableOpacity>
+
+                    <TouchableOpacity>
+                        <Text style={styles.subText}>
+                            Settings
+                        </Text>
+                        <Image source={require('../assets/DarkSinnyBar-E-llergic.png')}
+                               style={styles.subBar}/>
+                    </TouchableOpacity>
+
+                    <View style={styles.bottomBarView}>
+                    <Image source={require('../assets/DarkSinnyBar-E-llergic.png')}
+                           style={styles.bottomBar}/>
+                        <TouchableOpacity
+                            onPress={()=>{this.props.navigation.navigate('LoginScreen')}}
+                        >
+                        <Text style={styles.signOutText}>
+                            Sign out
+                        </Text>
+                        </TouchableOpacity>
+                    </View>
+
+                </View>
             </ImageBackground>
         )
     }
@@ -79,5 +125,53 @@ const styles = StyleSheet.create({
     },
 
     //BodyStyles
-
+    containerStyle:{
+        height:'82%',
+        width:'95%',
+        backgroundColor:'white',
+        marginTop:'10%',
+        marginLeft:'5%',
+        marginBottom: '3%',
+    },
+    titleText:{
+        color: '#b2d786',
+        fontSize: 30,
+        marginLeft:'7%',
+        marginTop:'7%'
+    },
+    titleBar:{
+        marginLeft:'7%',
+        marginTop:'2%',
+        width:'93%',
+        height:'2%',
+        marginBottom: '7%',
+    },
+    subText:{
+        color: '#88c540',
+        fontSize: 25,
+        marginLeft:'8%',
+        marginTop:'5%'
+    },
+    subBar:{
+        marginLeft:'7%',
+        marginTop:'2%',
+        width:'93%',
+        height:'5%',
+    },
+    bottomBarView:{
+        position: 'absolute',
+        bottom:'2%',
+        right:0,
+        width:'93%',
+        height:'13%',
+    },
+    bottomBar:{
+        width:'100%',
+        height:'5%',
+    },
+    signOutText:{
+        color: '#ff0d00',
+        fontSize: 22,
+        marginTop:'5%'
+    }
 });

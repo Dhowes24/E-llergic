@@ -8,6 +8,7 @@ import LoginScreen from './Components/LoginScreen';
 import ScannerScreen from './Components/ScannerScreen';
 import ListsScreen from './Components/ListsScreen';
 import AccountScreen from './Components/AccountScreen';
+import FriendsScreen from './Components/FriendsScreen';
 
 
 class App extends React.Component {
@@ -40,6 +41,9 @@ const AppNavigator = createStackNavigator({
   },
   AccountScreen:{
     screen: AccountScreen,
+  },
+  FriendsScreen:{
+    screen: FriendsScreen,
   },
 }, {
   initialRouteName: 'Home',
