@@ -5,10 +5,8 @@ import {
     Text,
     StyleSheet,
     FlatList,
-    Button,
     ImageBackground,
     Image,
-    TextInput,
     ActivityIndicator,
     TouchableOpacity,
 } from "react-native";
@@ -22,17 +20,24 @@ class FriendsScreen extends Component {
     };
 
     state = {
-        testFriendData:[{FriendName:'David Steinberg'},{FriendName:'Alex Sheer'},{FriendName:'Alexm Sheer'}]
+        testFriendData: [{FriendName: 'David Steinberg'}, {FriendName: 'Alex Sheer'}, {FriendName: 'Alexm Sheer'}]
     };
 
     renderFooter = () => {
         if (!this.state.loading) return null;
-        return(
+        return (
             <View>
                 <ActivityIndicator animating size={"large"}/>
             </View>
         )
     };
+
+    removeFriend(Name) {
+        let index = this.state.testFriendData.indexOf(Name);
+        if (index > -1) {
+            this.state.testFriendData.splice(index, 1);
+        }
+    }
 
     render() {
         return (
@@ -42,15 +47,18 @@ class FriendsScreen extends Component {
                 {/* Header */}
                 <View style={styles.headerStyle}>
                     <TouchableOpacity style={styles.leftNavigationArrow}
-                                      onPress={()=>{this.props.navigation.navigate('AccountScreen')}}
+                                      onPress={() => {this.props.navigation.navigate('AccountScreen')}}
                     >
                         <Image source={require('../assets/BackArrow-E-llergic.png')} // List Button
                                style={styles.arrowStyle}/>
                         <Text style={styles.navigationText}> Accounts</Text>
                     </TouchableOpacity>
-
-                    <Image source={require('../assets/FriendsLogo-E-llergic.png')} //Home Logo
-                           style={styles.LogoStyle}/>
+                    <TouchableOpacity
+                        onPress={() => {this.props.navigation.navigate('DownloadFriendListScreen')}}
+                    >
+                        <Image source={require('../assets/FriendsLogo-E-llergic.png')} //Home Logo
+                               style={styles.LogoStyle}/>
+                    </TouchableOpacity>
 
                 </View>
 
@@ -64,8 +72,9 @@ class FriendsScreen extends Component {
                            style={styles.titleBar}/>
                     <FlatList
                         data={this.state.testFriendData}
-                        renderItem={({ item }) => (
-                            <FriendCard FriendName={item.FriendName} /> //Add other data when database layout is figured out
+                        renderItem={({item}) => (
+                            <FriendCard FriendName={item.FriendName}
+                                        removeFunc={this.removeFriend}/> //Add other data when database layout is figured out
                         )}
                         keyExtractor={item => item.FriendName}
                         ListFooterComponent={this.renderFooter()}>
@@ -113,51 +122,51 @@ const styles = StyleSheet.create({
     },
     LogoStyle: {
         marginTop: '6%',
-        marginLeft:'-4%',
+        marginLeft: '-4%',
         justifyContent: 'center',
-        width: '24%',
-        height: '90%',
-        flex:0
+        width: 93,
+        height: 60,
+        flex: 0
     },
 
     //BodyStyles
-    containerStyle:{
-        height:'50%',
-        width:'95%',
-        backgroundColor:'white',
-        marginTop:'10%',
-        marginLeft:'2.5%',
-        marginRight:'2.5%',
+    containerStyle: {
+        height: '50%',
+        width: '95%',
+        backgroundColor: 'white',
+        marginTop: '5%',
+        marginLeft: '2.5%',
+        marginRight: '2.5%',
         marginBottom: '3%',
     },
-    connectContainerStyle:{
-        height:'30%',
-        width:'95%',
-        backgroundColor:'white',
-        marginLeft:'2.5%',
-        marginRight:'2.5%',
+    connectContainerStyle: {
+        height: '30%',
+        width: '95%',
+        backgroundColor: 'white',
+        marginLeft: '2.5%',
+        marginRight: '2.5%',
         marginBottom: '3%',
     },
-    titleText:{
+    titleText: {
         color: '#b2d786',
         fontSize: 30,
-        marginTop:'4%',
-        alignSelf:'center'
+        marginTop: '4%',
+        alignSelf: 'center'
 
     },
-    titleBar:{
-        marginLeft:'3.5%',
-        marginRight:'3.5%',
-        marginTop:'2%',
-        width:'93%',
-        height:'2%',
+    titleBar: {
+        marginLeft: '3.5%',
+        marginRight: '3.5%',
+        marginTop: '2%',
+        width: '93%',
+        height: '2%',
         marginBottom: '7%',
     },
-    connectTitleText:{
+    connectTitleText: {
         color: '#88c540',
         fontSize: 25,
-        marginTop:'7%',
-        marginLeft:'7%'
+        marginTop: '7%',
+        marginLeft: '7%'
 
     },
 });

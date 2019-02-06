@@ -10,17 +10,19 @@ import {
 
 
 import {Card, CardItem, Thumbnail, Body, Left, Right, Button, Icon} from "native-base";
+import DownloadFriendListScreen from "./DownloadFriendListScreen";
 
-class FriendCard extends Component {
+class DownloadListsCard extends Component {
 
     constructor(props) {
         super(props);
     }
 
     state = {
-        name: this.props.FriendName,
+        name: this.props.ListName,
 
-        ellipseToggle: false
+        ellipseToggle: false,
+        downloadToggle: false
     };
 
     removeFriend(Name) {
@@ -36,6 +38,7 @@ class FriendCard extends Component {
                     <Text style={styles.nameText}>
                         {this.state.name}
                     </Text>
+
                     <TouchableHighlight
                         onPress={() => {
                             this.setState({ellipseToggle: !this.state.ellipseToggle})
@@ -47,27 +50,25 @@ class FriendCard extends Component {
                             : require('../assets/Elipses-E-llergic.png')}
                                style={styles.ellipseImageStyle}/>
                     </TouchableHighlight>
+
+                    <TouchableHighlight
+                        onPress={() => {
+                            this.setState({downloadToggle: !this.state.downloadToggle})
+                        }}
+                        style={styles.downloadStyle}
+                        underlayColor={'white'}>
+                        <Image source={this.state.downloadToggle ?
+                            require('../assets/DownloadedButton-E-llergic.png')
+                            : require('../assets/DownloadButton-E-llergic.png')}
+                               style={styles.downloadImageStyle}/>
+                    </TouchableHighlight>
+
                 </CardItem>
 
                 {this.state.ellipseToggle && <CardItem style={styles.CardStyle}>
-                    <TouchableOpacity
-                        onPress={() => {
-                            //Have to pass parent navigate function down SOMEHOW
-                        }}
-                    >
-                        <Text style={styles.downloadWatchlist}>
-                            Download Watchlist
-                        </Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={() => {
-                            this.removeFriend(this.state.name)
-                        }}
-                    >
-                        <Text style={styles.removeFriend}>
-                            Remove Friend
-                        </Text>
-                    </TouchableOpacity>
+                    <Text>
+                        Ingredients
+                    </Text>
                 </CardItem>}
 
                 <CardItem>
@@ -81,7 +82,7 @@ class FriendCard extends Component {
 
 }
 
-export default FriendCard;
+export default DownloadListsCard;
 
 const styles = StyleSheet.create({
 
@@ -97,13 +98,21 @@ const styles = StyleSheet.create({
         width: 66,
         height: 19,
     },
+    downloadStyle:{
+      width:25,
+        height:25
+    },
     barStyle: {
-        height: '10%',
+        height: '30%',
+        width: '99%',
         marginBottom: '3%',
-        marginLeft: '-7%',
         justifyContent: 'center',
     },
     ellipseImageStyle: {
+        width: '100%',
+        height: '100%'
+    },
+    downloadImageStyle:{
         width: '100%',
         height: '100%'
     },

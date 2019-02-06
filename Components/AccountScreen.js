@@ -59,7 +59,9 @@ class AccountScreen extends Component {
                         style={styles.subBar}/>
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={()=>{this.props.navigation.navigate('SocialAccountsScreen')}}
+                    >
                         <Text style={styles.subText}>
                             Social Accounts
                         </Text>
@@ -67,7 +69,9 @@ class AccountScreen extends Component {
                                style={styles.subBar}/>
                     </TouchableOpacity>
 
-                    <TouchableOpacity>
+                    <TouchableOpacity
+                        onPress={()=>{this.props.navigation.navigate('SettingsScreen')}}
+                    >
                         <Text style={styles.subText}>
                             Settings
                         </Text>
@@ -79,7 +83,7 @@ class AccountScreen extends Component {
                     <Image source={require('../assets/DarkSinnyBar-E-llergic.png')}
                            style={styles.bottomBar}/>
                         <TouchableOpacity
-                            onPress={()=>{this.props.navigation.navigate('LoginScreen')}}
+                            onPress={()=>{this.props.navigation.navigate('Home')}}
                         >
                         <Text style={styles.signOutText}>
                             Sign out
@@ -120,8 +124,8 @@ const styles = StyleSheet.create({
         marginTop: '6%',
         marginLeft: '-2%',
         justifyContent: 'center',
-        width: '17%',
-        height: '100%'
+        width: 62,
+        height: 62,
     },
 
     //BodyStyles
@@ -129,7 +133,7 @@ const styles = StyleSheet.create({
         height:'82%',
         width:'95%',
         backgroundColor:'white',
-        marginTop:'10%',
+        marginTop:'5%',
         marginLeft:'5%',
         marginBottom: '3%',
     },
