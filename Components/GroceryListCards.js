@@ -11,7 +11,7 @@ import {
 
 import {Card, CardItem, Thumbnail, Body, Left, Right, Button, Icon} from "native-base";
 
-class DownloadListsCard extends Component {
+class GroceryListCards extends Component {
 
     constructor(props) {
         super(props);
@@ -21,12 +21,8 @@ class DownloadListsCard extends Component {
         name: this.props.ListName,
 
         ellipseToggle: false,
-        downloadToggle: false
     };
 
-    removeFriend(Name) {
-        this.props.removeFunc(Name)
-    };
 
     render() {
 
@@ -50,23 +46,18 @@ class DownloadListsCard extends Component {
                                style={styles.ellipseImageStyle}/>
                     </TouchableHighlight>
 
-                    <TouchableHighlight
-                        onPress={() => {
-                            this.setState({downloadToggle: !this.state.downloadToggle})
-                        }}
-                        style={styles.downloadStyle}
-                        underlayColor={'white'}>
-                        <Image source={this.state.downloadToggle ?
-                            require('../assets/DownloadedButton-E-llergic.png')
-                            : require('../assets/DownloadButton-E-llergic.png')}
-                               style={styles.downloadImageStyle}/>
-                    </TouchableHighlight>
+
+                    <TouchableOpacity>
+                        <Text style={styles.EditTextStyle}>
+                            Edit
+                        </Text>
+                    </TouchableOpacity>
 
                 </CardItem>
 
                 {this.state.ellipseToggle && <CardItem style={styles.CardStyle}>
                     <Text>
-                        Ingredients
+                        List
                     </Text>
                 </CardItem>}
 
@@ -81,7 +72,7 @@ class DownloadListsCard extends Component {
 
 }
 
-export default DownloadListsCard;
+export default GroceryListCards;
 
 const styles = StyleSheet.create({
 
@@ -94,11 +85,11 @@ const styles = StyleSheet.create({
         fontSize: 25,
     },
     ellipseStyle: {
-        width: 66,
-        height: 19,
+        width: 50,
+        height: 14,
     },
     downloadStyle:{
-      width:25,
+        width:25,
         height:25
     },
     barStyle: {
@@ -119,9 +110,9 @@ const styles = StyleSheet.create({
         color: '#3b84db',
         fontSize: 15,
     },
-    removeFriend: {
-        color: '#ff0d00',
-        fontSize: 15,
+    EditTextStyle:{
+        color:'#3b84db',
+        fontSize: 25
     }
 
 });

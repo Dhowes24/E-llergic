@@ -14,6 +14,8 @@ import SettingsScreen from './Components/SettingsScreen';
 import DownloadFriendListScreen from "./Components/DownloadFriendListScreen";
 import FriendCard from './Components/FriendCard';
 import DownloadListCard from './Components/DownloadListsCard';
+import WatchListScreen from './Components/WatchListScreen';
+import GroceryListsScreen from './Components/GroceryListsScreen'
 
 
 class App extends React.Component {
@@ -61,6 +63,12 @@ const AppNavigator = createStackNavigator({
   },
   FriendCard:{
     screen:FriendCard
+  },
+  WatchListScreen:{
+    screen:WatchListScreen
+  },
+  GroceryListsScreen:{
+    screen:GroceryListsScreen
   },
 }, {
   initialRouteName: 'Home',
