@@ -30,9 +30,12 @@ class GroceryListCards extends Component {
             <Card transparent={true}>
 
                 <CardItem style={styles.CardStyle}>
-                    <Text style={styles.nameText}>
-                        {this.state.name}
-                    </Text>
+                    <View style={styles.textBoxStyle}>
+                        <Text style={styles.nameText}
+                              adjustsFontSizeToFit={true}>
+                            {this.state.name}
+                        </Text>
+                    </View>
 
                     <TouchableHighlight
                         onPress={() => {
@@ -84,13 +87,17 @@ const styles = StyleSheet.create({
         color: '#b2d786',
         fontSize: 25,
     },
+    textBoxStyle: {
+        width: 150,
+        height: 30,
+    },
     ellipseStyle: {
         width: 50,
         height: 14,
     },
-    downloadStyle:{
-        width:25,
-        height:25
+    downloadStyle: {
+        width: 25,
+        height: 25
     },
     barStyle: {
         height: '30%',
@@ -102,7 +109,7 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%'
     },
-    downloadImageStyle:{
+    downloadImageStyle: {
         width: '100%',
         height: '100%'
     },
@@ -110,8 +117,8 @@ const styles = StyleSheet.create({
         color: '#3b84db',
         fontSize: 15,
     },
-    EditTextStyle:{
-        color:'#3b84db',
+    EditTextStyle: {
+        color: '#3b84db',
         fontSize: 25
     }
 

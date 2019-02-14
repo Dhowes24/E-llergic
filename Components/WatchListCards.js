@@ -34,9 +34,12 @@ class WatchListCards extends Component {
             <Card transparent={true}>
 
                 <CardItem style={styles.CardStyle}>
-                    <Text style={styles.nameText}>
+                    <View style={styles.textBoxStyle}>
+                    <Text adjustsFontSizeToFit={true}
+                        style={styles.nameText}>
                         {this.state.name}
                     </Text>
+                    </View>
 
                     <TouchableHighlight
                         onPress={() => {
@@ -98,6 +101,10 @@ const styles = StyleSheet.create({
     nameText: {
         color: '#b2d786',
         fontSize: 25,
+    },
+    textBoxStyle: {
+        width: 150,
+        height: 30,
     },
     ellipseStyle: {
         width: 50,
