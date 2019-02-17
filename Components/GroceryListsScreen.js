@@ -68,7 +68,9 @@ class GroceryListsScreen extends Component {
 
                 {/* Body2 */}
                 <View style={styles.createContainerStyle}>
-                    <TouchableOpacity style={styles.bottomButtonStyle}>
+                    <TouchableOpacity style={styles.bottomButtonStyle}
+                                      onPress={()=>{this.props.navigation.navigate('EditGroceryListScreen')}}
+                    >
                         <Text style={styles.ButtonTextStyle}>
                             Create Grocery List
                         </Text>

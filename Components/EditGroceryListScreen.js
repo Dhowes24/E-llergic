@@ -9,18 +9,18 @@ import {
     Image,
     ActivityIndicator,
     TouchableOpacity,
+    TextInput,
+    KeyboardAvoidingView
 } from "react-native";
-import WatchListCards from "./WatchListCards";
 
 
-class WatchListScreen extends Component {
+class EditGroceryListScreen extends Component {
 
     static navigationOptions = {
         header: null
     };
 
     state = {
-        testListData: [{ListName: 'Emilys Family'}, {ListName: 'No Nutsense'}, {ListName: 'Vegan'}]
     };
 
     renderFooter = () => {
@@ -40,13 +40,14 @@ class WatchListScreen extends Component {
                 {/* Header */}
                 <View style={styles.headerStyle}>
 
-                    <Image source={require('../assets/WatchlistLogo-E-llergic.png')}
+                    <Image source={require('../assets/AddGroceryListLogo-E-llergic.png')}
                            style={styles.LogoStyle}/>
 
                     <TouchableOpacity style={styles.rightNavigationArrow}
-                                      onPress={()=>{this.props.navigation.navigate('ListsScreen')}}
-                    >
-                        <Text style={styles.navigationText}> Lists</Text>
+                                      onPress={()=>{this.props.navigation.navigate('GroceryListsScreen')}}>
+
+                        <Text style={styles.navigationText}> Grocery Lists</Text>
+
                         <Image source={require('../assets/RightArrow-E-llergic.png')} //Account Button
                                style={styles.arrowStyle}/>
                     </TouchableOpacity>
@@ -54,7 +55,17 @@ class WatchListScreen extends Component {
 
                 {/* Body1 */}
 
-                <View style={styles.containerStyle}>
+                <KeyboardAvoidingView style={styles.containerStyle}
+                                      behavior="padding"
+                >
+                    <View style={styles.fillerView}>
+                    </View>
+                    <View style={styles.textInputView}>
+                        <TextInput placeholderTextColor={'lightgrey'}
+                                   placeholder="Add Item to Grocery List"
+                            //onChangeText={(Password) => this.setState({Password:Password})}
+                                   style={styles.textInputStyle}/>
+                    </View>
                     <FlatList
                         data={this.state.testListData}
                         renderItem={({item}) => (
@@ -64,22 +75,22 @@ class WatchListScreen extends Component {
                         ListFooterComponent={this.renderFooter()}>
 
                     </FlatList>
-                </View>
 
-                {/* Body2 */}
-                <View style={styles.createContainerStyle}>
+                    <View  style={styles.BottomTextInputView}>
+                        <TextInput placeholderTextColor={'lightgrey'}
+                                   placeholder="Name your Grocery List"
+                            //onChangeText={(Password) => this.setState({Password:Password})}
+                                   style={styles.textInputStyle}/>
+                    </View >
+
+                </KeyboardAvoidingView>
+                <View style={styles.doneContainerStyle}>
                     <TouchableOpacity style={styles.bottomButtonStyle}
-                                      onPress={()=>{this.props.navigation.navigate('EditWatchListScreen')}}>
+                                      onPress={()=>{this.props.navigation.navigate('GroceryListsScreen')}}>
                         <Text style={styles.ButtonTextStyle}>
-                            Create Watchlist
+                            Done
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.bottomButtonStyle}>
-                        <Text style={styles.ButtonTextStyle}>
-                            Download Friends Watchlist
-                        </Text>
-                    </TouchableOpacity>
-
                 </View>
 
             </ImageBackground>
@@ -88,7 +99,7 @@ class WatchListScreen extends Component {
 }
 
 
-export default WatchListScreen;
+export default EditGroceryListScreen;
 
 
 const styles = StyleSheet.create({
@@ -108,73 +119,75 @@ const styles = StyleSheet.create({
         height: '7%',
     },
     navigationText: {
-        fontSize: 20,
+        fontSize: 14,
         color: 'white',
-        marginTop: '-10%'
+        marginTop: '-5%',
     },
     LogoStyle: {
         marginTop: '6%',
-        marginLeft: '-4%',
+        marginRight:'-9%',
         justifyContent: 'center',
-        width: 104,
-        height: 50,
+        width: 90,
+        height: 62,
         flex: 0
     },
 
     //BodyStyles
     containerStyle: {
-        height: '60%',
+        height: '65%',
         width: '95%',
         backgroundColor: 'white',
         marginTop: '5%',
         marginLeft: '2.5%',
         marginRight: '2.5%',
-        marginBottom: '3%',
     },
-    createContainerStyle: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        height: '20%',
+    doneContainerStyle:{
+        height: '15%',
         width: '95%',
         backgroundColor: 'white',
         marginLeft: '2.5%',
         marginRight: '2.5%',
         marginBottom: '3%',
     },
-    titleText: {
-        color: '#b2d786',
-        fontSize: 30,
-        marginTop: '4%',
-        alignSelf: 'center'
-
+    textInputStyle: {
+        fontSize: 20,
+        width:'90%',
+        marginLeft: '4%',
     },
-    titleBar: {
-        marginLeft: '3.5%',
-        marginRight: '3.5%',
-        marginTop: '2%',
-        width: '93%',
-        height: '2%',
-        marginBottom: '7%',
+    fillerView:{
+        color:'white',
+        width:'100%',
+        height:'6%'
     },
-    connectTitleText: {
-        color: '#88c540',
-        fontSize: 25,
-        marginTop: '7%',
-        marginLeft: '7%'
+    textInputView:{
+        alignSelf:'center',
+        width:'90%',
+        height:35,
+        borderColor:'lightgrey',
+        borderWidth: 3,
+        borderRadius:10,
+    },
+    BottomTextInputView:{
+        alignSelf:'center',
+        width:'90%',
+        height:35,
+        borderColor:'lightgrey',
+        borderWidth: 3,
+        borderRadius:10,
+        bottom:'2%',
     },
     bottomButtonStyle:{
         width:'40%',
-        height:'70%',
+        height:60,
         backgroundColor: '#88c540',
         alignSelf:'center',
-        marginTop: '15%',
-        marginBottom:'15%',
         marginLeft:'5%',
         marginRight:'5%',
         borderRadius:10
     },
     ButtonTextStyle:{
         alignSelf: 'center',
+        top:'25%',
         fontSize: 22,
         color:'white'
     }

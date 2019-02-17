@@ -126,7 +126,6 @@ const styles= StyleSheet.create({
         fontSize: 26,
         marginTop:'7%',
         width:'90%',
-
         textAlign: "center"
     },
     greyBarStyle:{

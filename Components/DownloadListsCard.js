@@ -95,6 +95,7 @@ const styles = StyleSheet.create({
     nameText: {
         color: '#b2d786',
         fontSize: 25,
+        flex: 3,
     },
     textBoxStyle: {
         width: 150,
