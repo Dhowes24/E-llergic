@@ -11,6 +11,7 @@ import {
     TouchableOpacity,
 } from "react-native";
 import GroceryListCards from './GroceryListCards'
+import WatchListCards from "./WatchListScreen";
 
 
 class GroceryListsScreen extends Component {
@@ -58,7 +59,9 @@ class GroceryListsScreen extends Component {
                     <FlatList
                         data={this.state.testListData}
                         renderItem={({item}) => (
-                            <GroceryListCards ListName={item.ListName}/>
+                            <GroceryListCards ListName={item.ListName}
+                                              state={this.state}
+                                              navigateTo={this.props.navigation.navigate.bind(this)}/>
                         )}
                         keyExtractor={item => item.ListName}
                         ListFooterComponent={this.renderFooter()}>

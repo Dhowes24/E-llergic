@@ -22,7 +22,10 @@ class GroceryListCards extends Component {
 
         ellipseToggle: false,
     };
-
+    
+    navigateTo(page){
+        this.props.navigateTo(page)
+    }
 
     render() {
 
@@ -51,7 +54,8 @@ class GroceryListCards extends Component {
 
 
                     <TouchableOpacity>
-                        <Text style={styles.EditTextStyle}>
+                        <Text style={styles.EditTextStyle}
+                              onPress={()=>{this.navigateTo('EditGroceryListScreen')}}>
                             Edit
                         </Text>
                     </TouchableOpacity>

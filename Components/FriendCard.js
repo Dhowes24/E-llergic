@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+
 import {
     View,
     Text,
@@ -9,7 +10,7 @@ import {
 } from "react-native";
 
 
-import {Card, CardItem, Thumbnail, Body, Left, Right, Button, Icon} from "native-base";
+import {Card, CardItem, } from "native-base";
 
 class FriendCard extends Component {
 
@@ -24,8 +25,10 @@ class FriendCard extends Component {
     };
 
     removeFriend(Name) {
-        this.props.removeFunc(Name)
+         this.props.removeFunc(Name);
     };
+
+
 
     render() {
 
@@ -52,7 +55,7 @@ class FriendCard extends Component {
                 {this.state.ellipseToggle && <CardItem style={styles.CardStyle}>
                     <TouchableOpacity
                         onPress={() => {
-                            //Have to pass parent navigate function down SOMEHOW
+                            //Navigate Once I know how
                         }}
                     >
                         <Text style={styles.downloadWatchlist}>

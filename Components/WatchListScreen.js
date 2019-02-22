@@ -58,7 +58,9 @@ class WatchListScreen extends Component {
                     <FlatList
                         data={this.state.testListData}
                         renderItem={({item}) => (
-                            <WatchListCards ListName={item.ListName}/>
+                            <WatchListCards ListName={item.ListName}
+                                            state={this.state}
+                                            navigateTo={this.props.navigation.navigate.bind(this)}/>
                         )}
                         keyExtractor={item => item.ListName}
                         ListFooterComponent={this.renderFooter()}>

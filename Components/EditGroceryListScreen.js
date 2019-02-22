@@ -21,6 +21,7 @@ class EditGroceryListScreen extends Component {
     };
 
     state = {
+        items: this.props.items
     };
 
     renderFooter = () => {

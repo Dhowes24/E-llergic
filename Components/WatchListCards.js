@@ -28,6 +28,10 @@ class WatchListCards extends Component {
         this.props.removeFunc(Name)
     };
 
+    navigateTo(page){
+        this.props.navigateTo(page)
+    }
+
     render() {
 
         return (
@@ -66,7 +70,8 @@ class WatchListCards extends Component {
                     </TouchableHighlight>
 
                     <TouchableOpacity>
-                        <Text style={styles.EditTextStyle}>
+                        <Text style={styles.EditTextStyle}
+                              onPress={()=>{this.navigateTo('EditWatchListScreen')}}>
                             Edit
                         </Text>
                     </TouchableOpacity>

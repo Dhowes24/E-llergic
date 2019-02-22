@@ -20,7 +20,7 @@ class FriendsScreen extends Component {
     };
 
     state = {
-        testFriendData: [{FriendName: 'David Steinberg'}, {FriendName: 'Alex Sheer'}, {FriendName: 'Alexm Sheer'}]
+        testFriendData: [{FriendName: 'David Steinberg'}, {FriendName: 'Alex Sheer'}, {FriendName: 'Alexm Sheer'}],
     };
 
     renderFooter = () => {
@@ -33,10 +33,12 @@ class FriendsScreen extends Component {
     };
 
     removeFriend(Name) {
-        let index = this.state.testFriendData.indexOf(Name);
-        if (index > -1) {
-            this.state.testFriendData.splice(index, 1);
-        }
+        let arrCopy = this.state.testFriendData.slice();
+        let index = arrCopy.map(function(e) { return e.FriendName; }).indexOf(Name);
+
+        let removed = arrCopy.splice(index, 1);
+        this.setState({testFriendData: arrCopy});
+        alert(index)
     }
 
     render() {
@@ -74,6 +76,8 @@ class FriendsScreen extends Component {
                         data={this.state.testFriendData}
                         renderItem={({item}) => (
                             <FriendCard FriendName={item.FriendName}
+                                        state={this.state}
+                                        setState={this.setState.bind(this)}
                                         removeFunc={this.removeFriend}/> //Add other data when database layout is figured out
                         )}
                         keyExtractor={item => item.FriendName}

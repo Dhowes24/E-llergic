@@ -56,8 +56,7 @@ class EditWatchListScreen extends Component {
                 {/* Body1 */}
 
                 <KeyboardAvoidingView style={styles.containerStyle}
-                      behavior="padding"
-                >
+                      behavior="padding">
                     <View style={styles.fillerView}>
                     </View>
                     <View style={styles.textInputView}>
@@ -66,6 +65,7 @@ class EditWatchListScreen extends Component {
                                //onChangeText={(Password) => this.setState({Password:Password})}
                                style={styles.textInputStyle}/>
                     </View>
+
                     <FlatList
                         data={this.state.testListData}
                         renderItem={({item}) => (
@@ -79,7 +79,6 @@ class EditWatchListScreen extends Component {
                     <View  style={styles.BottomTextInputView}>
                         <TextInput placeholderTextColor={'lightgrey'}
                                    placeholder="Name your Watch List"
-                            //onChangeText={(Password) => this.setState({Password:Password})}
                                    style={styles.textInputStyle}/>
                     </View >
 
