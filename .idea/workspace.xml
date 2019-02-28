@@ -2,15 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="22a74427-7ed9-4c3c-a495-4f14e4c83a1a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Components/ListItemCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/EditGroceryListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/EditGroceryListScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/EditWatchlistScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/EditWatchlistScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/FriendCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/FriendCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/FriendsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/FriendsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/GroceryListCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/GroceryListCards.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/GroceryListsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/GroceryListsScreen.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Components/WatchListCards.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/WatchListCards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Components/WatchListScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/Components/WatchListScreen.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -27,10 +18,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="829">
-              <caret line="64" column="14" lean-forward="true" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+            <state relative-caret-position="675">
+              <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Components/WatchListScreen.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-71">
+              <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -39,54 +42,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Components/FriendsScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-95">
-              <caret line="58" column="70" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="70" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <marker date="1550714459423" expanded="true" signature="907:955" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Components/GroceryListsScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="63" column="100" selection-start-line="63" selection-start-column="100" selection-end-line="63" selection-end-column="100" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Components/GroceryListCards.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="54" column="84" selection-start-line="54" selection-start-column="84" selection-end-line="54" selection-end-column="84" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Components/FriendCard.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-542">
-              <caret line="8" column="22" lean-forward="true" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Components/WatchListScreen.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="233">
-              <caret line="62" column="98" lean-forward="true" selection-start-line="61" selection-start-column="44" selection-end-line="62" selection-end-column="98" />
+            <state relative-caret-position="35">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -97,8 +54,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Components/WatchListCards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="335">
-              <caret line="73" column="84" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="84" />
+            <state relative-caret-position="270">
+              <caret line="29" selection-start-line="29" selection-end-line="32" selection-end-column="5" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -109,7 +66,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Components/EditWatchlistScreen.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="1020">
               <caret line="81" selection-start-line="81" selection-end-line="81" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
@@ -121,8 +78,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Components/ListItemCard.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+            <state relative-caret-position="705">
+              <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -161,9 +118,9 @@
         <option value="$PROJECT_DIR$/Components/EditWatchlistScreen.js" />
         <option value="$PROJECT_DIR$/Components/ListItemCard.js" />
         <option value="$PROJECT_DIR$/Components/WatchListCards.js" />
-        <option value="$PROJECT_DIR$/Components/WatchListScreen.js" />
         <option value="$PROJECT_DIR$/Components/GroceryListsScreen.js" />
         <option value="$PROJECT_DIR$/Components/GroceryListCards.js" />
+        <option value="$PROJECT_DIR$/Components/WatchListScreen.js" />
       </list>
     </option>
   </component>
@@ -240,7 +197,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70073000" />
+    <option name="totallyTimeSpent" value="71101000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -253,6 +210,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="24" y="23" width="1354" height="848" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24156038" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -268,7 +226,7 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936507" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.1957672" />
+      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.34920636" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -426,8 +384,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="829">
-          <caret line="64" column="14" lean-forward="true" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
+        <state relative-caret-position="675">
+          <caret line="64" column="14" selection-start-line="64" selection-start-column="14" selection-end-line="64" selection-end-column="14" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
@@ -436,8 +394,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/ListItemCard.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="16" lean-forward="true" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
+        <state relative-caret-position="705">
+          <caret line="59" column="16" selection-start-line="59" selection-start-column="16" selection-end-line="59" selection-end-column="16" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -446,7 +404,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/EditWatchlistScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="1020">
           <caret line="81" selection-start-line="81" selection-end-line="81" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
@@ -463,19 +421,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/FriendsScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-95">
-          <caret line="58" column="70" lean-forward="true" selection-start-line="58" selection-start-column="40" selection-end-line="58" selection-end-column="70" />
+        <state relative-caret-position="35">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1550714459423" expanded="true" signature="907:955" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/WatchListScreen.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="233">
-          <caret line="62" column="98" lean-forward="true" selection-start-line="61" selection-start-column="44" selection-end-line="62" selection-end-column="98" />
+        <state relative-caret-position="-71">
+          <caret line="51" column="39" lean-forward="true" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -494,8 +451,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Components/WatchListCards.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="73" column="84" selection-start-line="73" selection-start-column="30" selection-end-line="73" selection-end-column="84" />
+        <state relative-caret-position="270">
+          <caret line="29" selection-start-line="29" selection-end-line="32" selection-end-column="5" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>

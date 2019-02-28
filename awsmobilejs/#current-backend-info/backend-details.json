@@ -1,0 +1,106 @@
+{
+	"name": "E-llergic-AWSmobile",
+	"projectId": "54e9b968-c449-4611-8f07-7bc317593afb",
+	"region": "us-east-2",
+	"state": "NORMAL",
+	"createdDate": "2019-02-28T18:40:30.717Z",
+	"lastUpdatedDate": "2019-02-28T18:40:35.226Z",
+	"consoleUrl": "https://console.aws.amazon.com/mobilehub/home#/54e9b968-c449-4611-8f07-7bc317593afb/build",
+	"resources": [
+		{
+			"type": "AWS::Pinpoint::AnalyticsApplication",
+			"name": "ellergicawsmobile_MobileHub",
+			"arn": "691cc21a16d2487b917458cf797988f9",
+			"feature": "analytics",
+			"attributes": {
+				"lastUpdateRequestID": "611fca42-174a-4ab1-8dad-64c2fc3e827d"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "ellergicawsmobile_mobileanalytics_MOBILEHUB_1153337746",
+			"arn": null,
+			"feature": "analytics",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "611fca42-174a-4ab1-8dad-64c2fc3e827d",
+				"role": "ellergicawsmobile_unauth_MOBILEHUB_1153337746"
+			}
+		},
+		{
+			"type": "AWS::Cognito::IdentityPool",
+			"name": "ellergicawsmobile_MOBILEHUB_1153337746",
+			"arn": "us-east-2:2617b03f-5816-4fae-8d05-fb5f00dbdb72",
+			"feature": "user-signin",
+			"attributes": {
+				"lastUpdateRequestID": "611fca42-174a-4ab1-8dad-64c2fc3e827d",
+				"poolid": "us-east-2:2617b03f-5816-4fae-8d05-fb5f00dbdb72",
+				"roleARNs": "arn:aws:iam::835671523252:role/ellergicawsmobile_unauth_MOBILEHUB_1153337746"
+			}
+		},
+		{
+			"type": "AWS::IAM::Role",
+			"name": "ellergicawsmobile_unauth_MOBILEHUB_1153337746",
+			"arn": "arn:aws:iam::835671523252:role/ellergicawsmobile_unauth_MOBILEHUB_1153337746",
+			"feature": "user-signin",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "611fca42-174a-4ab1-8dad-64c2fc3e827d"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "ellergicawsmobile-hosting-mobilehub-1153337746",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"lastUpdateRequestID": "611fca42-174a-4ab1-8dad-64c2fc3e827d",
+				"region": "us-east-2",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/ellergicawsmobile-hosting-mobilehub-1153337746",
+				"s3-bucket-website-url": "https://s3.amazonaws.com/ellergicawsmobile-hosting-mobilehub-1153337746"
+			}
+		},
+		{
+			"type": "AWS::CloudFront::Distribution",
+			"name": "d1sm1wdj0etg9g.cloudfront.net",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"id": "E2PI5IBFLTEY3J",
+				"lastUpdateRequestID": "611fca42-174a-4ab1-8dad-64c2fc3e827d"
+			}
+		},
+		{
+			"type": "AWS::IAM::Policy",
+			"name": "ellergicawsmobile_hosting_MOBILEHUB_1153337746",
+			"arn": null,
+			"feature": "hosting",
+			"attributes": {
+				"authType": "unauthenticated",
+				"lastUpdateRequestID": "611fca42-174a-4ab1-8dad-64c2fc3e827d",
+				"role": "ellergicawsmobile_unauth_MOBILEHUB_1153337746"
+			}
+		},
+		{
+			"type": "AWS::S3::Bucket",
+			"name": "ellergicawsmobile-deployments-mobilehub-1153337746",
+			"arn": null,
+			"feature": "common",
+			"attributes": {
+				"region": "us-east-2",
+				"s3-bucket-console-url": "https://s3.console.aws.amazon.com/s3/buckets/ellergicawsmobile-deployments-mobilehub-1153337746"
+			}
+		},
+		{
+			"type": "AWS::CloudFormation::Stack",
+			"name": "Development",
+			"arn": null,
+			"feature": "cloud-api",
+			"attributes": {
+				"primary": "true",
+				"region": "us-east-2",
+				"stateSummary": "NOT_YET_DEPLOYED"
+			}
+		}
+	]
+}

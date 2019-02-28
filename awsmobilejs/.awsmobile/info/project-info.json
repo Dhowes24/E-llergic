@@ -1,0 +1,19 @@
+{
+	"ProjectName": "E-llergic",
+	"ProjectPath": "/Users/derekhowes/E-llergic",
+	"InitializationTime": "2019-02-28-13-40-55",
+	"LastConfigurationTime": "2019-02-28-13-40-11",
+	"LastNPMInstallTime": "",
+	"FrontendLastBuildTime": "",
+	"LastPublishTime": "",
+	"BackendLastSyncTime": "2019-02-28-13-40-41",
+	"BackendLastBuildTime": "",
+	"BackendLastPushTime": "",
+	"BackendProjectID": "54e9b968-c449-4611-8f07-7bc317593afb",
+	"BackendProjectName": "E-llergic-AWSmobile",
+	"BackendProjectConsoleUrl": "https://console.aws.amazon.com/mobilehub/home#/54e9b968-c449-4611-8f07-7bc317593afb/build",
+	"BackendProjectCreationTime": "2019-02-28T18:40:30.717Z",
+	"BackendProjectLastUpdatedTime": "2019-02-28T18:40:35.226Z",
+	"Framework": "react-native",
+	"BackendLastSyncToDevTime": "2019-02-28-13-40-41"
+}

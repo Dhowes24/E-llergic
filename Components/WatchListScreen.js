@@ -76,7 +76,8 @@ class WatchListScreen extends Component {
                             Create Watchlist
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.bottomButtonStyle}>
+                    <TouchableOpacity style={styles.bottomButtonStyle}
+                                      onPress={()=>{this.props.navigation.navigate('FriendsScreen')}}>
                         <Text style={styles.ButtonTextStyle}>
                             Download Friends Watchlist
                         </Text>
