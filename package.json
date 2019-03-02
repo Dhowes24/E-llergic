@@ -21,7 +21,8 @@
     "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
     "react-native-elements": "^1.0.0",
     "react-navigation": "^3.0.9",
-    "react-navigation-transitions": "^1.0.8"
+    "react-navigation-transitions": "^1.0.8",
+    "@aws-amplify/core": "latest"
   },
   "devDependencies": {
     "babel-preset-expo": "^5.0.0"

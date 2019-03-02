@@ -36,6 +36,7 @@ class LoginScreen extends Component {
     signUp(){
         //SignupPHP
         //Parameters [User, Password, Phone]
+        this.props.navigation.navigate('ScannerScreen')
     };
 
     render(){
@@ -51,10 +52,13 @@ class LoginScreen extends Component {
                     {this.state.Login ? 'Login' : 'SignUp'}
                 </Text>
             </View>
-            <View style={styles.contentLogin}>
+
+            {/*Sign In*/}
+
+            {this.state.Login && <View style={styles.contentLogin}>
                 <TextInput placeholderTextColor={'darkgrey'}
                            placeholder="Username/Email"
-                           onChangeText={(Phone) => this.setState({Phone:Phone})}
+                           onChangeText={(User) => this.setState({User:User})}
                            style={styles.textInputStyle}/>
                 <Image
                 source={require('../assets/greyLoginBar-E-llergic.png')}
@@ -81,6 +85,55 @@ class LoginScreen extends Component {
                 </View>
                 </TouchableOpacity>
 
+            </View>}
+
+            {/*Sign Up*/}
+            {!this.state.Login && <View style={styles.contentSignUp}>
+                <TextInput placeholderTextColor={'darkgrey'}
+                           placeholder="Enter Phone Number"
+                           onChangeText={(Phone) => this.setState({Phone:Phone})}
+                           style={styles.textInputStyle}/>
+                <Image
+                    source={require('../assets/greyLoginBar-E-llergic.png')}
+                    style={styles.greyBarStyle}/>
+
+                <TextInput placeholderTextColor={'darkgrey'}
+                           placeholder="Enter Password"
+                           onChangeText={(Password) => this.setState({Password:Password})}
+                           secureTextEntry={true}
+                           style={styles.textInputStyle}/>
+
+                <Image
+                    source={require('../assets/greyLoginBar-E-llergic.png')}
+                    style={styles.greyBarStyle}/>
+
+                <TextInput placeholderTextColor={'darkgrey'}
+                           placeholder="Enter Username"
+                           onChangeText={(User) => this.setState({User:User})}
+                           secureTextEntry={true}
+                           style={styles.textInputStyle}/>
+
+                <Image
+                    source={require('../assets/greyLoginBar-E-llergic.png')}
+                    style={styles.greyBarStyle}/>
+                <TouchableOpacity
+                    onPress={()=>{this.state.Login ? this.login() : this.signUp()}}
+                    style={styles.buttonBorderLogin}>
+
+                    <View>
+                        <Text style={styles.clickableText}>
+                            {this.state.Login ? 'Login' : 'SignUp'}
+                        </Text>
+                    </View>
+                </TouchableOpacity>
+
+            </View>}
+
+            <View style={styles.container}>
+                <Button
+                    title={this.state.Login ? "SignUp?" : "Already have an account?"}
+                    onPress={()=>
+                        this.setState({Login:!this.state.Login})}/>
             </View>
 
         </ImageBackground>)
@@ -112,8 +165,21 @@ const styles= StyleSheet.create({
     contentLogin:{
         alignSelf:'center',
         marginTop: '5%',
-        width: '70.5%',
-        height: '30%',
+        width: 280,
+        height: 210,
+        backgroundColor:'white',
+        borderColor: '#88c540',
+        borderBottomLeftRadius: 10,
+        borderBottomRightRadius: 10,
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        borderWidth: 2
+    },
+    contentSignUp:{
+        alignSelf:'center',
+        marginTop: '5%',
+        width: 300,
+        height: 275,
         backgroundColor:'white',
         borderColor: '#88c540',
         borderBottomLeftRadius: 10,
@@ -137,8 +203,8 @@ const styles= StyleSheet.create({
         borderColor: '#88c540',
         backgroundColor:'#adea57',
         borderWidth: 3,
-        width: '40%',
-        height: '24%',
+        width: 160,
+        height: 50,
         alignSelf:'center',
         marginTop: '10%',
         borderBottomLeftRadius: 10,

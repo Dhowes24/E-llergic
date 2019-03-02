@@ -19,6 +19,11 @@ import GroceryListsScreen from './Components/GroceryListsScreen';
 import EditWatchListScreen from './Components/EditWatchlistScreen';
 import EditGroceryListScreen from './Components/EditGroceryListScreen';
 
+import { withAuthenticator } from 'aws-amplify-react-native'
+
+import Amplify from '@aws-amplify/core'
+import config from './aws-exports'
+Amplify.configure(config);
 
 class App extends React.Component {
   componentDidMount() {
