@@ -13,12 +13,15 @@ import {Font} from "expo";
 
 class LoginScreen extends Component {
 
-    state={
-        fontLoaded:false,
-        Login:true,
-        Phone:'',
-        Password:'',
-        User:''
+    state = {
+        fontLoaded: false,
+        Login: true,
+        Phone: '',
+        Password: 'password',
+        ConfirmPassword: 'password',
+        Email: 'd.howes24@gmail.com',
+        modalVisible: false,
+        confirmationCode: '',
     };
 
     static navigationOptions = {
@@ -26,17 +29,42 @@ class LoginScreen extends Component {
     };
 
 
-    login(){
-        //Login.php
-        //Parameters [Password, Phone]
-        //Check Password to Phone Number
-        this.props.navigation.navigate('ScannerScreen')
+    async login() {
+        try {
+            const response = await Auth.signIn(this.state.User, this.state.Password);
+            this.props.navigation.navigate('ScannerScreen')
+        } catch (err) {
+            console.log(`Error: ${JSON.stringify(err, null, 2)}`);
+        }
     };
 
-    signUp(){
-        //SignupPHP
-        //Parameters [User, Password, Phone]
-        this.props.navigation.navigate('ScannerScreen')
+    handleSignUp = () => {
+        // alert(JSON.stringify(this.state));
+        const { Email, Password, ConfirmPassword } = this.state;
+        // Make sure passwords match
+        if (Password === ConfirmPassword) {
+            Auth.signUp({
+                username: Email,
+                password: Password,
+                attributes: { Email },
+            })
+            // On success, show Confirmation Code Modal
+                .then(() => this.setState({ modalVisible: true }))
+                // On failure, display error in console
+                .catch(err => console.log(err));
+        } else {
+            alert('Passwords do not match.');
+        }
+    };
+
+    handleConfirmationCode = () => {
+        const { email, confirmationCode } = this.state;
+        Auth.confirmSignUp(email, confirmationCode, {})
+            .then(() => {
+                this.setState({ modalVisible: false });
+                this.props.navigation.navigate('ScannerScreen')
+            })
+            .catch(err => console.log(err));
     };
 
     render(){
@@ -117,7 +145,7 @@ class LoginScreen extends Component {
                     source={require('../assets/greyLoginBar-E-llergic.png')}
                     style={styles.greyBarStyle}/>
                 <TouchableOpacity
-                    onPress={()=>{this.state.Login ? this.login() : this.signUp()}}
+                    onPress={()=>{this.state.Login ? this.login() : this.handleSignUp()}}
                     style={styles.buttonBorderLogin}>
 
                     <View>
