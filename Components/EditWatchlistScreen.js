@@ -124,7 +124,6 @@ const styles = StyleSheet.create({
     },
     LogoStyle: {
         marginTop: '6%',
-        marginRight:'-9%',
         justifyContent: 'center',
         width: 104,
         height: 58,
@@ -136,7 +135,7 @@ const styles = StyleSheet.create({
         height: '65%',
         width: '95%',
         backgroundColor: 'white',
-        marginTop: '5%',
+        marginTop: 10,
         marginLeft: '2.5%',
         marginRight: '2.5%',
     },
@@ -146,7 +145,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         marginLeft: '2.5%',
         marginRight: '2.5%',
-        marginBottom: '3%',
+        marginBottom: 10,
     },
     textInputStyle: {
         fontSize: 20,
@@ -156,7 +155,7 @@ const styles = StyleSheet.create({
     fillerView:{
       color:'white',
       width:'100%',
-      height:'6%'
+      height:20
     },
     textInputView:{
         alignSelf:'center',
@@ -173,16 +172,17 @@ const styles = StyleSheet.create({
         borderColor:'lightgrey',
         borderWidth: 3,
         borderRadius:10,
-        bottom:'2%',
+        bottom:15,
     },
     bottomButtonStyle:{
-        width:'40%',
+        width:180,
         height:60,
         backgroundColor: '#88c540',
         alignSelf:'center',
         marginLeft:'5%',
         marginRight:'5%',
-        borderRadius:10
+        borderRadius:10,
+        marginTop: 20
     },
     ButtonTextStyle:{
         alignSelf: 'center',

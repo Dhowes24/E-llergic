@@ -1,14 +1,14 @@
 {
 	"providers": {
 		"awscloudformation": {
-			"AuthRoleName": "e-llergic-20190228145200-authRole",
-			"UnauthRoleArn": "arn:aws:iam::835671523252:role/e-llergic-20190228145200-unauthRole",
-			"AuthRoleArn": "arn:aws:iam::835671523252:role/e-llergic-20190228145200-authRole",
+			"AuthRoleName": "e-llergic-20190318205907-authRole",
+			"UnauthRoleArn": "arn:aws:iam::835671523252:role/e-llergic-20190318205907-unauthRole",
+			"AuthRoleArn": "arn:aws:iam::835671523252:role/e-llergic-20190318205907-authRole",
 			"Region": "us-east-2",
-			"DeploymentBucketName": "e-llergic-20190228145200-deployment",
-			"UnauthRoleName": "e-llergic-20190228145200-unauthRole",
-			"StackName": "e-llergic-20190228145200",
-			"StackId": "arn:aws:cloudformation:us-east-2:835671523252:stack/e-llergic-20190228145200/51515720-3b92-11e9-802f-069569a529ae"
+			"DeploymentBucketName": "e-llergic-20190318205907-deployment",
+			"UnauthRoleName": "e-llergic-20190318205907-unauthRole",
+			"StackName": "e-llergic-20190318205907",
+			"StackId": "arn:aws:cloudformation:us-east-2:835671523252:stack/e-llergic-20190318205907/32c18290-49e2-11e9-a4eb-0a84bc2bb20a"
 		}
 	},
 	"auth": {
@@ -16,17 +16,17 @@
 			"service": "Cognito",
 			"providerPlugin": "awscloudformation",
 			"providerMetadata": {
-				"s3TemplateURL": "https://s3.amazonaws.com/e-llergic-20190228145200-deployment/amplify-cfn-templates/auth/cognito50b31cf0-cloudformation-template.yml",
+				"s3TemplateURL": "https://s3.amazonaws.com/e-llergic-20190318205907-deployment/amplify-cfn-templates/auth/cognito50b31cf0-cloudformation-template.yml",
 				"logicalId": "authcognito50b31cf0"
 			},
-			"lastPushTimeStamp": "2019-02-28T20:09:28.356Z",
+			"lastPushTimeStamp": "2019-03-19T01:05:56.941Z",
 			"output": {
-				"AppClientSecret": "tf8t2tnviiqnqenqa6pflru8f723emrshv6bpud9ul3mmc38o5t",
-				"UserPoolId": "us-east-2_p6WjP6MkC",
-				"AppClientIDWeb": "6hg4tv4nnc5kolrmuig3pa4jg4",
-				"AppClientID": "6shbfabd6lg6f0q043fuqmkude",
-				"IdentityPoolId": "us-east-2:001f1ccd-966d-4f7f-8655-7781e324bbd2",
-				"IdentityPoolName": "cognito50b31cf0_identitypool_50b31cf0__test",
+				"AppClientSecret": "nc2b3nfqnlm023a7mqqblc8u3k3po9g9s7ejh5nklhsnmnr55us",
+				"UserPoolId": "us-east-2_LSXMAsmEm",
+				"AppClientIDWeb": "1aerc0raa256k34t5kqogmod5g",
+				"AppClientID": "55061qs72ki588rb9rj70jlmrj",
+				"IdentityPoolId": "us-east-2:afa301d4-f6eb-4636-9ce4-d727a7119f43",
+				"IdentityPoolName": "cognito50b31cf0_identitypool_50b31cf0__dev",
 				"UserPoolName": "cognito50b31cf0_userpool_50b31cf0"
 			},
 			"lastPushDirHash": "TrzAnOmJfiR8TDDBbM98vtk46dQ="

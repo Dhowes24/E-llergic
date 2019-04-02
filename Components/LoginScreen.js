@@ -30,12 +30,13 @@ class LoginScreen extends Component {
 
 
     async login() {
-        try {
-            const response = await Auth.signIn(this.state.User, this.state.Password);
-            this.props.navigation.navigate('ScannerScreen')
-        } catch (err) {
-            console.log(`Error: ${JSON.stringify(err, null, 2)}`);
-        }
+        this.props.navigation.navigate('ScannerScreen')
+        // try {
+        //     const response = await Auth.signIn(this.state.User, this.state.Password);
+        //     this.props.navigation.navigate('ScannerScreen')
+        // } catch (err) {
+        //     console.log(`Error: ${JSON.stringify(err, null, 2)}`);
+        // }
     };
 
     handleSignUp = () => {
@@ -174,8 +175,8 @@ const styles= StyleSheet.create({
     Title:{
         alignSelf: 'center',
         marginTop: '30%',
-        width: '73%',
-        height: '10%'
+        width: 254,
+        height: 66
     },
     LoginSignUpView:{
         alignSelf: 'center',
