@@ -13,6 +13,7 @@ import {
 
 import {Camera, Permissions, BarCodeScanner} from 'expo';
 import axios from 'axios';
+import WatchListScreen from "./WatchListScreen";
 
 
 
@@ -22,6 +23,20 @@ const cloudVisionKey = '70fb1dd0ce8f2f717ee4c57adcd9833a3acd9859';
 //ENDPOINT
 const cloudvision = 'https://vision.googleapis.com/v1/images:annotate?key=' + cloudVisionKey;
 
+//Nutrionix APP ID
+const appID = 'e8fe8164';
+
+//Nutritionix Key
+const applicationKey = '170920103c84249a7b142300794e3058';
+
+//Current List of Product data
+let ingredientList = [];
+
+//Allergins to look for list
+let allerginsList = [];
+
+
+
 
 class ScannerScreen extends Component {
 
@@ -30,11 +45,9 @@ class ScannerScreen extends Component {
     };
 
     state = {
-        fontLoaded: false,
-        Login: true,
-        Phone: '',
-        Password: '',
-        User: '',
+        warningNeeded:false,
+
+        allerginsFound:[],
 
         hasCameraPermission: null,
         type: Camera.Constants.Type.back,
@@ -43,6 +56,8 @@ class ScannerScreen extends Component {
     async componentDidMount() {
         const {status} = await Permissions.askAsync(Permissions.CAMERA);
         this.setState({hasCameraPermission: status === 'granted'});
+        //For each active list in WatchListScreen, add all non repetitive allergins to 'allerginsList'
+        //
     }
 
     render() {
@@ -83,13 +98,40 @@ class ScannerScreen extends Component {
                         style={styles.CameraStyle}
                     />}
                 </View>
+                <TouchableOpacity
+                    onPress={() => {this.handleBarCodeScanned()}}>
+                    <Image source={require('../assets/MainPageLogo-E-llergic.png')} //Home Logo
+                           style={styles.LogoStyle}/>
+                </TouchableOpacity>
+
             </ImageBackground>
         )
     }
 
-    handleBarCodeScanned = ({ type, data }) => {
-         alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+    handleBarCodeScanned = () => {
+         //alert(`Bar code with type ${type} and data ${data} has been scanned!`);
+        fetch("https://api.nutritionix.com/v1_1/item?upc=52200004265&appId="+appID+"&appKey="+applicationKey)
+            .then((response) => response.json())
+                .then((responseJson) => {
+                    alert(responseJson.nf_ingredient_statement);
+                    this.handleIngredientData(responseJson.nf_ingredient_statement);
+            })
+            .catch((error) => {
+                console.error(error);
+            });
     };
+
+    handleIngredientData = (data) =>{
+        ingredientList = data.split(',');
+        alert(ingredientList.length);
+        for (let i=0; i<ingredientList.length; i++)
+            for (let a =0; a<allerginsList.length; a++){
+                if(ingredientList[i].includes(allerginsList[a])){
+                    this.setState({warningNeeded:true, allerginsFound:this.state.allerginsFound.push(allerginsList[a])});
+                }
+            }
+        //Function that calls a modal depedending on wether 'warningNeeded' is Positive or False
+    }
 }
 
 
