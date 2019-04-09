@@ -35,7 +35,7 @@ class GroceryListsScreen extends Component {
     };
 
     toEditNavigation = (props) =>{
-        this.props.navigation.navigate('EditGroceryListScreen', {props})
+        this.props.navigation.navigate('EditGroceryListScreen', {items:props})
     };
 
     async componentDidMount() {
@@ -70,7 +70,7 @@ class GroceryListsScreen extends Component {
                         renderItem={({item}) => (
                             <GroceryListCards ListName={item.ListName}
                                               state={this.state}
-                                              navigateTo={this.props.navigation.navigate.bind(this)}/>
+                                              toEditNavigation={this.toEditNavigation.bind(this)}/>
                         )}
                         keyExtractor={item => item.ListName}
                         ListFooterComponent={this.renderFooter()}>

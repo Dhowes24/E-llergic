@@ -20,12 +20,22 @@ class GroceryListCards extends Component {
     state = {
         name: this.props.ListName,
         list:[{listItem: 'pepper'}, {listItem: 'oranges'}, {listItem: 'Pineapple'}, {listItem: 'Apple'}],
-
+        //TODO
+        //Have the onComponentDidMount get the list data from the database
+        
         ellipseToggle: false,
     };
+
+    listItems(column){
+      let outputList=[];
+      for (let i = column; i<this.state.list.length;i+=3){
+          outputList.push(this.state.list[i].listItem +"\n")
+      }
+      return outputList
+    };
     
-    navigateTo(page){
-        this.props.navigateTo(page)
+    toEditScreen(){
+        this.props.toEditNavigation(this.state.list)
     }
 
     render() {
@@ -56,7 +66,7 @@ class GroceryListCards extends Component {
 
                     <TouchableOpacity>
                         <Text style={styles.EditTextStyle}
-                              onPress={()=>{this.navigateTo('EditGroceryListScreen')}}>
+                              onPress={()=>{this.toEditScreen()}}>
                             Edit
                         </Text>
                     </TouchableOpacity>
