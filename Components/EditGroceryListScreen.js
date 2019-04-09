@@ -12,6 +12,7 @@ import {
     TextInput,
     KeyboardAvoidingView
 } from "react-native";
+import ListItemCard from "./ListItemCard";
 
 
 class EditGroceryListScreen extends Component {
@@ -20,9 +21,14 @@ class EditGroceryListScreen extends Component {
         header: null
     };
 
-    state = {
-        items: this.props.items
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            items: this.props.items,
+            list: [{listItem: 'pepper'}, {listItem: 'oranges'}, {listItem: 'Pineapple'}, {listItem: 'Apple'}],
+
+        };
+    }
 
     renderFooter = () => {
         if (!this.state.loading) return null;
@@ -56,35 +62,36 @@ class EditGroceryListScreen extends Component {
 
                 {/* Body1 */}
 
-                <KeyboardAvoidingView style={styles.containerStyle}
-                                      behavior="padding"
-                >
+                <View style={styles.containerStyle}
+                                      behavior="padding">
+
                     <View style={styles.fillerView}>
                     </View>
                     <View style={styles.textInputView}>
                         <TextInput placeholderTextColor={'lightgrey'}
                                    placeholder="Add Item to Grocery List"
-                            //onChangeText={(Password) => this.setState({Password:Password})}
                                    style={styles.textInputStyle}/>
                     </View>
+
+
                     <FlatList
-                        data={this.state.testListData}
+                        data={this.state.items}
                         renderItem={({item}) => (
-                            <WatchListCards ListName={item.ListName}/>
+                            <ListItemCard listItem={item.listItem}/>
                         )}
-                        keyExtractor={item => item.ListName}
+                        keyExtractor={item => item.listItem}
                         ListFooterComponent={this.renderFooter()}>
 
                     </FlatList>
 
-                    <View  style={styles.BottomTextInputView}>
+                    <KeyboardAvoidingView  style={styles.BottomTextInputView}>
                         <TextInput placeholderTextColor={'lightgrey'}
                                    placeholder="Name your Grocery List"
                             //onChangeText={(Password) => this.setState({Password:Password})}
                                    style={styles.textInputStyle}/>
-                    </View >
+                    </KeyboardAvoidingView >
 
-                </KeyboardAvoidingView>
+                </View>
                 <View style={styles.doneContainerStyle}>
                     <TouchableOpacity style={styles.bottomButtonStyle}
                                       onPress={()=>{this.props.navigation.navigate('GroceryListsScreen')}}>
@@ -153,6 +160,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         width:'90%',
         marginLeft: '4%',
+        marginBottom: '3%',
     },
     fillerView:{
         color:'white',

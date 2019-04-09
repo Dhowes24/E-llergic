@@ -9,7 +9,7 @@ import {
 } from "react-native";
 
 
-import {Card, CardItem, Thumbnail, Body, Left, Right, Button, Icon} from "native-base";
+import {Card, CardItem} from "native-base";
 
 class GroceryListCards extends Component {
 
@@ -19,6 +19,7 @@ class GroceryListCards extends Component {
 
     state = {
         name: this.props.ListName,
+        list:[{listItem: 'pepper'}, {listItem: 'oranges'}, {listItem: 'Pineapple'}, {listItem: 'Apple'}],
 
         ellipseToggle: false,
     };
@@ -64,7 +65,13 @@ class GroceryListCards extends Component {
 
                 {this.state.ellipseToggle && <CardItem style={styles.CardStyle}>
                     <Text>
-                        List
+                        {this.listItems(0)}
+                    </Text>
+                    <Text>
+                        {this.listItems(1)}
+                    </Text>
+                    <Text>
+                        {this.listItems(2)}
                     </Text>
                 </CardItem>}
 

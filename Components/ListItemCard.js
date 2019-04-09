@@ -22,12 +22,6 @@ class ListItemCard extends Component {
         name: this.props.listItem,
     };
 
-    removeFriend(Name) {
-        this.props.removeFunc(Name);
-    };
-
-
-
     render() {
 
         return (
@@ -37,15 +31,11 @@ class ListItemCard extends Component {
                     <Text style={styles.nameText}>
                         {this.state.name}
                     </Text>
-                    <TouchableHighlight>
-                        {/*Make a swipe delete*/}
-                    </TouchableHighlight>
+                    {/*<TouchableHighlight>*/}
+                        {/*/!*Make a swipe delete*!/*/}
+                    {/*</TouchableHighlight>*/}
                 </CardItem>
 
-                <CardItem>
-                    <Image source={require('../assets/DarkSinnyBar-E-llergic.png')}
-                           style={styles.barStyle}/>
-                </CardItem>
 
             </Card>
         )
@@ -62,8 +52,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     nameText: {
-        color: 'darkgrey',
-        fontSize: 12,
+        color: 'black',
+        fontSize: 18,
     },
     ellipseStyle: {
         width: 66,

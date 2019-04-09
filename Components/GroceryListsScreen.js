@@ -11,7 +11,6 @@ import {
     TouchableOpacity,
 } from "react-native";
 import GroceryListCards from './GroceryListCards'
-import WatchListCards from "./WatchListScreen";
 
 
 class GroceryListsScreen extends Component {
@@ -22,6 +21,8 @@ class GroceryListsScreen extends Component {
 
     state = {
         testListData: [{ListName: 'Thanksgiving'}, {ListName: 'Feb 24th'}]
+        //TODO
+        //Have componentDidMount() call for all grocery list data in the database
     };
 
     renderFooter = () => {
@@ -32,6 +33,14 @@ class GroceryListsScreen extends Component {
             </View>
         )
     };
+
+    toEditNavigation = (props) =>{
+        this.props.navigation.navigate('EditGroceryListScreen', {props})
+    };
+
+    async componentDidMount() {
+
+    }
 
     render() {
         return (
