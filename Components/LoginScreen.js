@@ -11,6 +11,9 @@ import {
 } from "react-native";
 import {Font} from "expo";
 
+import  {Auth}  from 'aws-amplify';
+
+
 class LoginScreen extends Component {
 
     state = {
@@ -39,23 +42,35 @@ class LoginScreen extends Component {
         // }
     };
 
+    // handleSignUp = () => {
+    //     // alert(JSON.stringify(this.state));
+    //     const { Email, Password, ConfirmPassword } = this.state;
+    //     // Make sure passwords match
+    //     if (Password === ConfirmPassword) {
+    //         Auth.signUp({
+    //             username: Email,
+    //             password: Password,
+    //             attributes: { Email },
+    //         })
+    //         // On success, show Confirmation Code Modal
+    //             .then(() => this.setState({ modalVisible: true }))
+    //             // On failure, display error in console
+    //             .catch(err => console.log(err));
+    //     } else {
+    //         alert('Passwords do not match.');
+    //     }
+    // };
+
     handleSignUp = () => {
-        // alert(JSON.stringify(this.state));
-        const { Email, Password, ConfirmPassword } = this.state;
-        // Make sure passwords match
-        if (Password === ConfirmPassword) {
-            Auth.signUp({
-                username: Email,
-                password: Password,
-                attributes: { Email },
-            })
-            // On success, show Confirmation Code Modal
-                .then(() => this.setState({ modalVisible: true }))
-                // On failure, display error in console
-                .catch(err => console.log(err));
-        } else {
-            alert('Passwords do not match.');
-        }
+        const email = this.state.Email;
+
+        Auth.signUp({
+            username:"d.howes242@gmail.com",
+            password:'Password1!',
+            attributes:{ email},
+        }).catch(err => console.log(err));
+        this.handleConfirmationCode()
+
     };
 
     handleConfirmationCode = () => {
