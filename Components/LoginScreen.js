@@ -11,7 +11,8 @@ import {
 } from "react-native";
 import {Font} from "expo";
 
-import  {Auth}  from 'aws-amplify';
+import { compose, graphql } from 'react-apollo'
+import  getUser from "./queries/getUser";
 
 
 class LoginScreen extends Component {
@@ -19,12 +20,10 @@ class LoginScreen extends Component {
     state = {
         fontLoaded: false,
         Login: true,
-        Phone: '',
-        Password: 'password',
-        ConfirmPassword: 'password',
-        Email: 'd.howes24@gmail.com',
+        Password: '',
+        ConfirmPassword: '',
+        Email: '',
         modalVisible: false,
-        confirmationCode: '',
     };
 
     static navigationOptions = {
@@ -61,27 +60,27 @@ class LoginScreen extends Component {
     //     }
     // };
 
-    handleSignUp = () => {
-        const email = this.state.Email;
-
-        Auth.signUp({
-            username:"d.howes242@gmail.com",
-            password:'Password1!',
-            attributes:{ email},
-        }).catch(err => console.log(err));
-        this.handleConfirmationCode()
-
-    };
-
-    handleConfirmationCode = () => {
-        const { email, confirmationCode } = this.state;
-        Auth.confirmSignUp(email, confirmationCode, {})
-            .then(() => {
-                this.setState({ modalVisible: false });
-                this.props.navigation.navigate('ScannerScreen')
-            })
-            .catch(err => console.log(err));
-    };
+    // handleSignUp = () => {
+    //     const email = this.state.Email;
+    //
+    //     Auth.signUp({
+    //         username:"d.howes242@gmail.com",
+    //         password:'Password1!',
+    //         attributes:{ email},
+    //     }).catch(err => console.log(err));
+    //     this.handleConfirmationCode()
+    //
+    // };
+    //
+    // handleConfirmationCode = () => {
+    //     const { email, confirmationCode } = this.state;
+    //     Auth.confirmSignUp(email, confirmationCode, {})
+    //         .then(() => {
+    //             this.setState({ modalVisible: false });
+    //             this.props.navigation.navigate('ScannerScreen')
+    //         })
+    //         .catch(err => console.log(err));
+    // };
 
     render(){
         return(
@@ -184,7 +183,6 @@ class LoginScreen extends Component {
 
     }
 }
-export default LoginScreen;
 
 const styles= StyleSheet.create({
     Title:{

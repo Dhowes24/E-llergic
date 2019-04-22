@@ -13,7 +13,6 @@ import SocialAccountsScreen from './Components/SocialAccountsScreen';
 import SettingsScreen from './Components/SettingsScreen';
 import DownloadFriendListScreen from "./Components/DownloadFriendListScreen";
 import FriendCard from './Components/FriendCard';
-import DownloadListCard from './Components/DownloadListsCard';
 import WatchListScreen from './Components/WatchListScreen';
 import GroceryListsScreen from './Components/GroceryListsScreen';
 import EditWatchListScreen from './Components/EditWatchlistScreen';
@@ -21,27 +20,45 @@ import EditGroceryListScreen from './Components/EditGroceryListScreen';
 
 import { withAuthenticator } from 'aws-amplify-react-native'
 
-import Amplify from 'aws-amplify'
+import { Rehydrated } from 'aws-appsync-react';
+import { ApolloProvider } from 'react-apollo';
 import aws_exports from './aws-exports'
+import {AWSAppSyncClient} from "aws-appsync";
 
-Amplify.configure(aws_exports);
 
-class App extends React.Component {
-  componentDidMount() {
-    Font.loadAsync({
-      'Comfortaa-Light': require('./assets/fonts/Comfortaa-Light.ttf'),
-      'Comfortaa-Bold': require('./assets/fonts/Comfortaa-Bold.ttf'),
-    });
+// class App extends React.Component {
+//   componentDidMount() {
+//     Font.loadAsync({
+//       'Comfortaa-Light': require('./assets/fonts/Comfortaa-Light.ttf'),
+//       'Comfortaa-Bold': require('./assets/fonts/Comfortaa-Bold.ttf'),
+//     });
+//   }
+//
+//   render() {
+//     return (
+//         <Root>
+//           <AppNavigator/>
+//         </Root>
+//     );
+//   }
+// }
+
+const client = new AWSAppSyncClient({
+  url: aws_exports.aws_appsync_graphqlEndpoint,
+  region: aws_exports.aws_appsync_region,
+  auth: {
+    type: aws_exports.aws_appsync_authenticationType,
+    apiKey: aws_exports.aws_appsync_apiKey,
   }
+});
 
-  render() {
-    return (
-        <Root>
-          <AppNavigator/>
-        </Root>
-    );
-  }
-}
+const WithProvider = () => (
+    <ApolloProvider client={client}>
+      <Rehydrated>
+        <AppContainer />
+      </Rehydrated>
+    </ApolloProvider>
+);
 
 const AppNavigator = createStackNavigator({
   Home: {
@@ -89,7 +106,7 @@ const AppNavigator = createStackNavigator({
 
 const AppContainer = createAppContainer(AppNavigator);
 
-export default AppContainer;
+export default WithProvider;
 
 const HomeBackground = StyleSheet.create({
   container: {
